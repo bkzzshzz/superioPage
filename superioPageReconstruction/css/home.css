@@ -47,6 +47,7 @@ nav {
     align-items: center;
     gap:10px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 
@@ -107,6 +108,45 @@ button {
     background-color: darkblue;
 }
 
+
+.banner {
+}
+
+.banner-left {
+
+}
+
+.banner-left p {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.banner-left p span {
+    color: blue;
+}
+
+.banner-inputs {
+    display: flex;
+    gap:10px;
+}
+
+.banner-inputs input{
+    padding: 20px;
+    width: 150px;
+    border: none;
+}
+
+.banner-input-first {
+border-right:10rem;
+}
+
+/* .banner-input-first::after {
+    content: "";
+    height: 20px;
+    width: 10px;
+    color: black;
+
+} */
 
 
 
