@@ -1,0 +1,109 @@
+nav {
+    padding: 30px;
+    height: 50px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-logo {
+    cursor: pointer;
+}
+
+
+.nav-center-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+li {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.only-home {
+    position: relative;
+}
+
+.only-home, .only-home.svg {
+    color: $primary-color;
+    fill: $primary-color;
+}
+
+
+.dropdown-menu-home {
+    display: none;
+    background: white;
+    width: fit-content;
+    position: absolute;
+    left:0;
+    top:40px;
+    /* visibility: hidden;
+    content-visibility:hidden; */
+
+}
+
+.only-home:hover .dropdown-menu-home {
+    display: flex;
+}
+
+
+
+.nav-right-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap :20px;
+    padding: 20px;
+    margin-right: 0;
+}
+
+button {
+    background: none;
+    min-width: 150px;
+    padding:  20px;
+    border-radius: 10px;
+    border: none;
+    color: blue;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+
+.button-login {
+    background-color: gainsboro;
+}
+
+.button-login:hover {
+    background-color: blue;
+    color: white;
+}
+
+.button-job-post {
+    color: white;
+    background-color: blue;
+}
+
+.button-job-post:hover {
+    background-color: darkblue;
+}
