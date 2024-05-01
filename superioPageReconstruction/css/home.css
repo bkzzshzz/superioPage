@@ -304,7 +304,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 150px 0; }
 
 .popular-job-categories-top {
   display: flex;
@@ -322,6 +323,50 @@ button {
 .popular-job-categories-top-p2 {
   font-size: 16px;
   font-weight: 200;
+  color: grey; }
+
+.popular-job-categories-bottom {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 60px; }
+
+.job-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 350px;
+  height: 75px;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  padding: 20px 0px; }
+
+.job-lists-svg {
+  width: 75px;
+  height: 75px;
+  background-color: #cec2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; }
+
+.job-lists-svg svg {
+  width: 50px;
+  height: 50px;
+  stroke: blue;
+  fill: none; }
+
+.job-title- {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; }
+
+.job-title {
+  font-size: 20px;
+  font-weight: 400; }
+
+.openings {
+  font-size: 12px;
   color: grey; }
 
 /*# sourceMappingURL=home.css.map */
