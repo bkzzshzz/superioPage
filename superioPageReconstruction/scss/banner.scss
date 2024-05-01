@@ -49,9 +49,9 @@
 }
 .with-divider::after {
   content: "";
-  width: 20px;
+  width: 2px;
   height: 40px;
-  background-color: grey;
+  background-color: rgb(221, 217, 217);
   position: absolute;
   top: 0;
 }

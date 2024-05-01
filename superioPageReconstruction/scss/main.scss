@@ -11,8 +11,8 @@ body {
 }
 
 .container {
-  max-width: 1920px;
-  margin: 0 60px;
+  max-width: 1440px;
+  margin: auto auto;
 }
 .top-section {
   padding-right: 15px;
@@ -25,3 +25,21 @@ body {
 @import "./banner.scss";
 
 @import "./popularJobSection.scss";
+
+@import "./featuredJobs.scss";
+
+@import "./testimonials.scss";
+
+@import "./companyImg.scss";
+
+@import "./findJobs.scss";
+
+@import "./recent-news.scss";
+
+@import "./download-and-enjoy.scss";
+
+@import "./recruiting.scss";
+
+@import "./contacts-information.scss";
+
+@import "./footer.scss";

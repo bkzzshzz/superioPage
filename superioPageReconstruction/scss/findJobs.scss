@@ -1,0 +1,101 @@
+.find-jobs {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 1200px;
+  position: relative;
+
+  .find-jobs-top {
+    display: flex;
+    gap: 100px;
+
+    .find-jobs-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+
+      .p1 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      .p2 {
+        font-size: 14px;
+        color: grey;
+        line-height: 2;
+      }
+
+      ul {
+        align-self: flex-start;
+        align-content: flex-start;
+      }
+
+      li {
+        //   position: relative;
+      }
+
+      li::before {
+        content: "";
+      }
+
+      button {
+        width: 60px;
+      }
+
+      .attach-card {
+        position: absolute;
+        left: 500px;
+        bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px;
+
+        svg {
+          position: absolute;
+          top: -40px;
+          left: -35px;
+          height: 75px;
+          width: 75px;
+          fill: blue;
+          stroke: white;
+        }
+        p {
+          font-size: 17px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.find-jobs-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .p1 {
+    font-size: 50px;
+    font-weight: 800;
+  }
+
+  .p2 {
+    font-size: 16px;
+    color: grey;
+  }
+}
