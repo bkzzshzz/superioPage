@@ -37,14 +37,14 @@
 
 .job-lists {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
   width: 350px;
-  height: 75px;
+  height: 60px;
   border: 1px solid lightblue;
   border-radius: 10px;
-  padding: 20px 0px;
+  padding: 25px 10px;
 }
 
 .job-lists-svg {
