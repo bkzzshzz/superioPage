@@ -121,13 +121,15 @@ button {
 
 .banner-inputs {
   display: flex;
-  gap: 10px;
+  align-items: self-end;
+  gap: 30px;
   margin: 20px 0;
-  background: white; }
+  background: white;
+  border-radius: 10px;
+  padding: 0px 0px 10px 10px; }
 
 .banner-inputs input {
   padding: 20px;
-  width: 150px;
   border: none; }
 
 .banner-input-first {
@@ -145,6 +147,7 @@ button {
   top: 0; }
 
 .banner-inputs-button {
+  align-self: center;
   background-color: blue;
   color: white;
   cursor: pointer; }
@@ -752,6 +755,7 @@ footer {
     width: 25px; }
     footer .my-svg svg {
       height: 24px;
-      width: 24px; }
+      width: 24px;
+      fill: grey; }
 
 /*# sourceMappingURL=home.css.map */
