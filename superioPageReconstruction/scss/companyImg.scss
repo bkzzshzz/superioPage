@@ -1,6 +1,18 @@
 .company-img {
-  padding: 25px 0;
+  padding: 25px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .img-4 {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .img-5 {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }

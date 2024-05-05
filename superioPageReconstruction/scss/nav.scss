@@ -1,109 +1,144 @@
 nav {
-    padding: 30px;
-    height: 50px;
-    display: flex;
+  background-color: #f2f5fb;
+  padding: 0 60px;
 
-    justify-content: space-between;
-    align-items: center;
-    
+  @media (max-width: 1266px) {
+    padding: 0 15px;
+    background-color: white;
+  }
+}
+
+.nav-bar {
+  //   padding: 30px;
+  height: 100px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .nav-logo {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 .nav-center-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    font-size: 14px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+
+  @media (max-width: 1266px) {
+    display: none;
+  }
 }
 
-
 li {
-    list-style: none; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .only-home {
-    position: relative;
+  position: relative;
 }
 
-.only-home, .only-home.svg {
-    color: $primary-color;
-    fill: $primary-color;
+.only-home,
+.only-home.svg {
+  color: $primary-color;
+  fill: $primary-color;
 }
-
 
 .dropdown-menu-home {
-    display: none;
-    background: white;
-    width: fit-content;
-    position: absolute;
-    left:0;
-    top:40px;
-    /* visibility: hidden;
-    content-visibility:hidden; */
-
+  display: none;
+  background: white;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  top: 40px;
 }
 
 .only-home:hover .dropdown-menu-home {
-    display: flex;
+  display: flex;
 }
 
-
-
 .nav-right-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap :20px;
-    padding: 20px;
-    margin-right: 0;
-}
-
-button {
-    background: none;
-    min-width: 150px;
-    padding:  20px;
+    padding: 20px 30px;
+    // min-width: 100px;
+    height: 50px;
     border-radius: 10px;
     border: none;
     color: blue;
     font-size: 14px;
     font-weight: 300;
     cursor: pointer;
+    align-self: center;
+  }
 
-}
+  .button-upload-your-cv {
+    background-color: #f2f5fb;
+    color: blue;
+  }
 
-.button-login {
-    background-color: gainsboro;
-}
+  .button-upload-your-cv:hover {
+    background-color: #f2f5fb;
+  }
+  .button-login {
+    background-color: #e2eaf8;
+    color: blue;
+  }
 
-.button-login:hover {
+  .button-login:hover {
     background-color: blue;
     color: white;
-}
+  }
 
-.button-job-post {
+  .button-job-post {
     color: white;
     background-color: blue;
-}
+  }
 
-.button-job-post:hover {
+  .button-job-post:hover {
     background-color: darkblue;
+  }
+
+  @media (max-width: 1266px) {
+    display: none;
+  }
+}
+
+.svg-after-1266 {
+  display: none;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  @media (max-width: 1266px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }

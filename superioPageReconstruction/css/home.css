@@ -7,17 +7,19 @@ body {
   font-family: Arial, Helvetica, sans-serif; }
 
 .container {
-  max-width: 1440px;
-  margin: auto auto; }
-
-.top-section {
-  padding-right: 15px;
-  padding-right: 15px;
-  background-color: skyblue; }
+  max-width: 1920px;
+  margin: 0 auto; }
 
 nav {
-  padding: 30px;
-  height: 50px;
+  background-color: #f2f5fb;
+  padding: 0 60px; }
+  @media (max-width: 1266px) {
+    nav {
+      padding: 0 15px;
+      background-color: white; } }
+
+.nav-bar {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -39,6 +41,9 @@ nav {
   gap: 10px;
   font-size: 14px;
   cursor: pointer; }
+  @media (max-width: 1266px) {
+    .nav-center-buttons {
+      display: none; } }
 
 li {
   list-style: none;
@@ -50,7 +55,8 @@ li {
 .only-home {
   position: relative; }
 
-.only-home, .only-home.svg {
+.only-home,
+.only-home.svg {
   color: green;
   fill: green; }
 
@@ -60,9 +66,7 @@ li {
   width: fit-content;
   position: absolute;
   left: 0;
-  top: 40px;
-  /* visibility: hidden;
-  content-visibility:hidden; */ }
+  top: 40px; }
 
 .only-home:hover .dropdown-menu-home {
   display: flex; }
@@ -71,40 +75,60 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  margin-right: 0; }
+  gap: 20px; }
+  .nav-right-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: blue;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    align-self: center; }
+  .nav-right-buttons .button-upload-your-cv {
+    background-color: #f2f5fb;
+    color: blue; }
+  .nav-right-buttons .button-upload-your-cv:hover {
+    background-color: #f2f5fb; }
+  .nav-right-buttons .button-login {
+    background-color: #e2eaf8;
+    color: blue; }
+  .nav-right-buttons .button-login:hover {
+    background-color: blue;
+    color: white; }
+  .nav-right-buttons .button-job-post {
+    color: white;
+    background-color: blue; }
+  .nav-right-buttons .button-job-post:hover {
+    background-color: darkblue; }
+  @media (max-width: 1266px) {
+    .nav-right-buttons {
+      display: none; } }
 
-button {
-  background: none;
-  min-width: 150px;
-  padding: 20px;
-  border-radius: 10px;
-  border: none;
-  color: blue;
-  font-size: 14px;
-  font-weight: 300;
-  cursor: pointer; }
-
-.button-login {
-  background-color: gainsboro; }
-
-.button-login:hover {
-  background-color: blue;
-  color: white; }
-
-.button-job-post {
-  color: white;
-  background-color: blue; }
-
-.button-job-post:hover {
-  background-color: darkblue; }
+.svg-after-1266 {
+  display: none; }
+  .svg-after-1266 svg {
+    width: 25px;
+    height: 25px; }
+  @media (max-width: 1266px) {
+    .svg-after-1266 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; } }
 
 .banner {
+  background-color: #f2f5fb;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  gap: 100px; }
+  gap: 100px;
+  height: 100vh;
+  position: relative; }
   @media (max-width: 992px) {
     .banner {
       flex-wrap: wrap; } }
@@ -127,13 +151,25 @@ button {
   background: white;
   border-radius: 10px;
   padding: 0px 0px 10px 10px; }
+  @media (max-width: 991px) {
+    .banner-inputs {
+      flex-direction: column;
+      justify-content: start;
+      gap: 30px;
+      background-color: #f2f5fb; } }
 
-.banner-inputs input {
-  padding: 20px;
-  border: none; }
-
-.banner-input-first {
-  /* border-right:10rem; */ }
+.banner-input-first,
+.banner-input-second,
+.banner-inputs-button {
+  height: 50px;
+  border: none;
+  border-radius: 10px; }
+  @media (max-width: 991px) {
+    .banner-input-first,
+    .banner-input-second,
+    .banner-inputs-button {
+      width: 90vw;
+      padding: 0 30px; } }
 
 .with-divider {
   position: relative; }
@@ -145,11 +181,17 @@ button {
   background-color: #ddd9d9;
   position: absolute;
   top: 0; }
+  @media (max-width: 991px) {
+    .with-divider::after {
+      display: none; } }
 
 .banner-inputs-button {
   align-self: center;
   background-color: blue;
   color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
   cursor: pointer; }
 
 .banner-inputs-button:hover {
@@ -160,7 +202,13 @@ button {
   font-weight: 100; }
 
 .banner-right {
-  position: relative; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh; }
+  @media (max-width: 1023px) {
+    .banner-right {
+      display: none; } }
 
 .pop-up-thing-1 {
   height: 100px;
@@ -190,15 +238,15 @@ button {
   font-weight: bold; }
 
 .pop-up-thing-2 {
-  height: 150px;
-  width: 300px;
+  height: 135px;
+  width: 230px;
   border-radius: 10px;
   background: white;
   position: absolute;
-  top: 200px;
+  top: 80px;
   bottom: auto;
   left: auto;
-  right: -110px;
+  right: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,19 +257,19 @@ button {
   font-weight: 600; }
 
 .pop-up-thing-3 {
-  height: 100px;
+  height: 75px;
   width: 300px;
   border-radius: 10px;
   background: white;
   position: absolute;
   top: auto;
-  bottom: 50px;
+  bottom: 250px;
   left: auto;
-  right: -80px;
+  right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 18px;
   padding: 10px; }
 
 .briefcase-div {
@@ -331,18 +379,27 @@ button {
 .popular-job-categories-bottom {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 60px; }
+  gap: 30px; }
+  @media (max-width: 991px) {
+    .popular-job-categories-bottom {
+      grid-template-columns: auto auto; } }
+  @media (max-width: 767px) {
+    .popular-job-categories-bottom {
+      display: flex;
+      flex-direction: column; } }
 
 .job-lists {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  width: 350px;
   height: 60px;
   border: 1px solid lightblue;
   border-radius: 10px;
   padding: 25px 10px; }
+  @media (max-width: 767px) {
+    .job-lists {
+      width: 90vw; } }
 
 .job-lists-svg {
   width: 75px;
@@ -398,6 +455,10 @@ button {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   gap: 30px; }
+  @media (max-width: 991px) {
+    .featured-jobs-bottom {
+      display: flex;
+      flex-direction: column; } }
   .featured-jobs-bottom .featured-jobs-title {
     display: flex;
     justify-content: flex-start;
@@ -406,8 +467,10 @@ button {
     position: relative;
     border: 1px dotted grey;
     border-radius: 10px;
-    padding: 30px 20px;
-    width: 600px; }
+    padding: 30px 20px; }
+    @media (max-width: 991px) {
+      .featured-jobs-bottom .featured-jobs-title {
+        width: 90vw; } }
     .featured-jobs-bottom .featured-jobs-title .bookmark-svg {
       position: absolute;
       height: 25px;
@@ -458,17 +521,15 @@ button {
         .featured-jobs-bottom .featured-jobs-title .div-outer .div-inner-3 .div3 {
           color: pink;
           background-color: orange; }
-
-button {
-  margin-top: 20px;
-  color: white;
-  background-color: #3333e7;
-  letter-spacing: 1px;
-  font-size: 14px;
-  cursor: pointer; }
-
-button:hover {
-  background-color: #1616e0; }
+  .featured-jobs-bottom button {
+    margin-top: 20px;
+    color: white;
+    background-color: #3333e7;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: pointer; }
+  .featured-jobs-bottom button:hover {
+    background-color: #1616e0; }
 
 .testimonials {
   padding: 100px 0;
@@ -519,10 +580,16 @@ button:hover {
         gap: 30px; }
 
 .company-img {
-  padding: 25px 0;
+  padding: 25px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 1024px) {
+    .company-img .img-4 {
+      display: none; } }
+  @media (max-width: 768px) {
+    .company-img .img-5 {
+      display: none; } }
 
 .find-jobs {
   padding: 100px 0;
@@ -534,6 +601,35 @@ button:hover {
   .find-jobs .find-jobs-top {
     display: flex;
     gap: 100px; }
+    .find-jobs .find-jobs-top .find-jobs-img {
+      position: relative; }
+      .find-jobs .find-jobs-top .find-jobs-img .attach-card {
+        position: absolute;
+        right: -180px;
+        bottom: -50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px; }
+        .find-jobs .find-jobs-top .find-jobs-img .attach-card svg {
+          position: absolute;
+          top: -40px;
+          left: -35px;
+          height: 75px;
+          width: 75px;
+          fill: blue;
+          stroke: white; }
+        .find-jobs .find-jobs-top .find-jobs-img .attach-card p {
+          font-size: 17px;
+          font-weight: 500; }
+        @media (max-width: 991px) {
+          .find-jobs .find-jobs-top .find-jobs-img .attach-card {
+            flex-wrap: wrap; } }
     .find-jobs .find-jobs-top .find-jobs-right {
       display: flex;
       flex-direction: column;
@@ -547,54 +643,30 @@ button:hover {
         color: grey;
         line-height: 2; }
       .find-jobs .find-jobs-top .find-jobs-right ul {
-        align-self: flex-start;
-        align-content: flex-start; }
-      .find-jobs .find-jobs-top .find-jobs-right li::before {
-        content: ""; }
-      .find-jobs .find-jobs-top .find-jobs-right button {
-        width: 60px; }
-      .find-jobs .find-jobs-top .find-jobs-right .attach-card {
-        position: absolute;
-        left: 500px;
-        bottom: 200px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        height: 100px;
-        border-radius: 10px;
-        background-color: white;
-        padding: 20px; }
-        .find-jobs .find-jobs-top .find-jobs-right .attach-card svg {
-          position: absolute;
-          top: -40px;
-          left: -35px;
-          height: 75px;
-          width: 75px;
-          fill: blue;
-          stroke: white; }
-        .find-jobs .find-jobs-top .find-jobs-right .attach-card p {
-          font-size: 17px;
-          font-weight: 500; }
-
-.find-jobs-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around; }
-  .find-jobs-bottom div {
+        align-items: start; }
+      .find-jobs .find-jobs-top .find-jobs-right li i {
+        margin-right: 10px; }
+      .find-jobs .find-jobs-top .find-jobs-right button {
+        width: 60px; }
+  .find-jobs .find-jobs-bottom {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
     justify-content: center;
-    align-items: center; }
-  .find-jobs-bottom .p1 {
-    font-size: 50px;
-    font-weight: 800; }
-  .find-jobs-bottom .p2 {
-    font-size: 16px;
-    color: grey; }
+    align-items: center;
+    justify-content: space-around; }
+    .find-jobs .find-jobs-bottom div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center; }
+    .find-jobs .find-jobs-bottom .p1 {
+      font-size: 50px;
+      font-weight: 800; }
+    .find-jobs .find-jobs-bottom .p2 {
+      font-size: 16px;
+      color: grey; }
 
 .recent-news {
   padding: 50px 0;
