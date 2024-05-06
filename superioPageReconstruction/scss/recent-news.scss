@@ -1,11 +1,15 @@
 .recent-news {
-  padding: 50px 0;
+  padding: 50px 100px;
   background-color: rgb(232, 227, 236);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 992px) {
+    padding: 50px 50px;
+  }
 
   .recent-news-top {
     display: flex;
@@ -33,14 +37,24 @@
   align-items: center;
   gap: 20px;
 
+  @media (max-width: 992px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
-    width: 350px;
     height: fit-content;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    width: auto;
 
     .image-div {
       //   padding: 20px 10px;
@@ -52,10 +66,10 @@
     }
 
     img {
-      width: 350px;
       height: 200px;
       border-radius: 10px;
       object-fit: cover;
+      width: 100%;
     }
 
     .card-bottom {
